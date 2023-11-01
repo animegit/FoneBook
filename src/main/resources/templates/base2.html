@@ -43,11 +43,11 @@
 <div class="sidebar ">
 
     <span class="crossbtn" onclick="toggleSidebar()">&times;</span>
-    <a class="item" > <i class="fa-solid fa-house-chimney-user"></i>Home</a>
+    <a class="item" th:href="@{/user/index}"> <i class="fa-solid fa-house-chimney-user"></i>Home</a>
     <a class="item"th:href="@{/user/add-contacts}" > <i class="fa-solid fa-square-plus"></i>AddContacts</a>
 
     <a class="item" th:href="@{/user/show-contacts/0}"><i class="fa-solid fa-address-book"></i>View Contacts</a>
-    <a class="item" href="#"><i class="fa-solid fa-user"></i>Your Profile</a>
+    <a class="item" th:href="@{/user/profile}"><i class="fa-solid fa-user"></i>Your Profile</a>
     <a class="item" href="#"><i class="fa-solid fa-gears"></i>Settings</a>
     <a class="item" th:href="@{/logout}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
     <div class="divider"></div>

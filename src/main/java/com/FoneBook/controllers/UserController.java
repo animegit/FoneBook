@@ -157,4 +157,11 @@ return "user_dashboard";
         m.addAttribute("contact",contact);
         return "update_contact";
     }
+
+    @GetMapping("/profile")
+    public String profileview(Model m){
+        m.addAttribute("title","Profile");
+        return "profile";
+
+    }
 }
