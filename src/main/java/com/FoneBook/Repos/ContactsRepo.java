@@ -1,6 +1,7 @@
 package com.FoneBook.Repos;
 
 import com.FoneBook.models.Contacts;
+import com.FoneBook.models.Users;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,4 +14,7 @@ public interface ContactsRepo extends JpaRepository<Contacts,Integer> {
     //pagination
     @Query("from Contacts as c where c.user.id=:userId")
     public Page<Contacts> findContactsById(@Param("userId")int userId, Pageable pageable);
+
+    public List<Contacts> findByNameContainingAndUser(String name, Users user);
+
 }

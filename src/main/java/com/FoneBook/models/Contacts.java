@@ -1,5 +1,6 @@
 package com.FoneBook.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.ManyToAny;
 
 import jakarta.persistence.Column;
@@ -87,6 +88,7 @@ public class Contacts {
 	@Column(length=1000)
 	private String description;
 	@ManyToOne
+	@JsonIgnore
 	private Users user;
 	
 	
