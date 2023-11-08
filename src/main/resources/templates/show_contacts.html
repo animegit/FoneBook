@@ -37,6 +37,8 @@
            </div>
        </div>
 
+
+       <div class="table-responsive">
      <table class="table">
        <thead>
        <tr>
@@ -81,6 +83,7 @@
        </tbody>
      </table>
 
+       </div>
 <!--     Pagination-->
 
      <nav aria-label="Page navigation example">
@@ -93,6 +96,14 @@
      </nav>
    </div>
  </div>
+
+    <script>
+    $(document).ready(()=>{
+    $('.item').removeClass('active');
+    $("#show-link").addClass("active");
+
+    });
+    </script>
 </section>
 
 </body>

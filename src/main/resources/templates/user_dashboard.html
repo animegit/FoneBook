@@ -19,9 +19,22 @@
                 </div>
                 <h1 class="text-center text-secondary font-italic" style="font-size: 24px; margin-top: 20px;">Start Adding Contacts........</h1>
                 <a th:href="@{/user/add-contacts}" class="btn btn-primary btn-block text-uppercase" style="margin-top: 20px;">Add Contacts</a>
+
             </div>
+
+
         </div>
     </div>
+
+    <script>
+
+$(document).ready(()=>{
+$('.item').removeClass('active');
+$("#home-link").addClass("active");
+
+});
+
+    </script>
 </section>
 
 </body>

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title th:text="${title}">Base</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--Navbar-->
@@ -43,12 +45,12 @@
 <div class="sidebar ">
 
     <span class="crossbtn" onclick="toggleSidebar()">&times;</span>
-    <a class="item" th:href="@{/user/index}"> <i class="fa-solid fa-house-chimney-user"></i>Home</a>
-    <a class="item"th:href="@{/user/add-contacts}" > <i class="fa-solid fa-square-plus"></i>AddContacts</a>
+    <a id="home-link" class="item" th:href="@{/user/index}"> <i class="fa-solid fa-house-chimney-user"></i>Home</a>
+    <a  id="add-link"class="item"th:href="@{/user/add-contacts}" > <i class="fa-solid fa-square-plus"></i>AddContacts</a>
 
-    <a class="item" th:href="@{/user/show-contacts/0}"><i class="fa-solid fa-address-book"></i>View Contacts</a>
-    <a class="item" th:href="@{/user/profile}"><i class="fa-solid fa-user"></i>Your Profile</a>
-    <a class="item" href="#"><i class="fa-solid fa-gears"></i>Settings</a>
+    <a id="show-link"class="item" th:href="@{/user/show-contacts/0}"><i class="fa-solid fa-address-book"></i>View Contacts</a>
+    <a id="profile-link"class="item" th:href="@{/user/profile}"><i class="fa-solid fa-user"></i>Your Profile</a>
+    <a  id ="setting-link"class="item" th:href="@{/user/settings }"><i class="fa-solid fa-gears"></i>Settings</a>
     <a class="item" th:href="@{/logout}"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
     <div class="divider"></div>
 
@@ -81,7 +83,7 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script th:src="@{/Js/script.js}"></script>

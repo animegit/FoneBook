@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="base2::Layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<section>
+
+   <div class="container">
+
+       <div class="row">
+
+
+           <div class="col-md-12">
+
+
+               <div class="card">
+
+                   <div class="card-body">
+
+                       <h3>Change password</h3>
+
+                       <form th:action="@{/user/change-password}" method="post">
+
+<!--     Old Password-->
+
+                           <div class="form-group">
+                               <input name="oldPassword" type="password" class="form-control" placeholder="Enter your old password">
+
+
+                           </div>
+
+                           <!--     Old Password-->
+
+                           <div class="form-group">
+                               <input name="newPassword" type="password" class="form-control" placeholder="Enter your New password">
+
+
+                           </div>
+
+<div class="container text-center">
+
+    <button type="submit"class="btn btn-success">Change</button>
+    <button type="reset" class="btn btn-warning">Reset</button>
+</div>
+
+                       </form>
+
+                   </div>
+               </div>
+           </div>
+       </div>
+
+   </div>
+
+    <script>
+
+        $(document).ready(()=>{
+        $('.item').removeClass('active');
+        $("#setting-link").addClass("active");
+
+        });
+
+    </script>
+</section>
+
+</body>
+</html>
