@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="base::Layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+</head>
+<body>
+
+<section>
+    <div id="login">
+
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12" style="height:200px">
+                        <!--  Forgot Form-->
+                        <div class="alert alert-success mt-3" role="alert">
+                           4-digit otp has been send to your mail..
+                        </div>
+
+
+                        <form th:action="@{/send-otp}" method="post">
+                            <div class="form-group text-center">
+                                <input name="otp"required="required" type="text" placeholder="Enter Otp here"/>
+
+
+
+                            </div>
+                            <div class="cotainer text-center">
+                                <button class="btn btn-warning">Verify</button>
+
+
+                            </div>
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
